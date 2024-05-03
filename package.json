@@ -1,0 +1,33 @@
+{
+  "name": "links-lsp",
+  "displayName": "Links Language Server",
+  "description": "Language Server Protocol extension for the Links programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:links"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "links",
+        "aliases": ["Links", "links"],
+        "extensions": [".links"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "links",
+        "scopeName": "source.links",
+        "path": "./syntaxes/links.tmLanguage.json"
+      }
+    ]
+  }
+}

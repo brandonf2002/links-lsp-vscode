@@ -1,0 +1,69 @@
+{
+  "scopeName": "source.links",
+  "patterns": [
+    {
+      "match": "#.*$",
+      "name": "comment.line.links",
+      "captures": {
+        "0": {
+          "patterns": [
+            {
+              "match": "\\b(TODO|FIXME|XXX|NOTE)\\b",
+              "name": "keyword.todo.links"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "match": "\\b\\d+\\b",
+      "name": "constant.numeric.links"
+    },
+    {
+      "match": "\\b[-+]?\\d+\\b",
+      "name": "constant.numeric.links"
+    },
+    {
+      "match": "\\b\\d+\\.\\d*\\b",
+      "name": "constant.numeric.float.links"
+    },
+    {
+      "match": "\\b[-+]?\\d+\\.\\d*\\b",
+      "name": "constant.numeric.float.links"
+    },
+    {
+      "match": "\\b[A-Z][A-Za-z0-9_]*\\b",
+      "name": "entity.name.type.links"
+    },
+    {
+      "match": "\\b[a-z][a-zA-Z0-9_]*(')*(\\b)?",
+      "name": "variable.other.links"
+    },
+    {
+      "begin": "<#>",
+      "end": "</#>",
+      "name": "meta.tag.xml.links"
+    },
+    {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.links"
+    },
+    {
+      "match": "\\b(alien|as|case|client|database|default|delete|escape|for|forall|from|fun|formlet|in|yields|insert|linfun|mu|mutual|native|nu|offer|orderby|op|page|query|readonly|receive|returning|select|server|set|sig|spawn|spawnAngel|spawnClient|spawnDemon|spawnWait|switch|table|TableHandle|typename|update|values|var|where|with|tablekeys)\\b",
+      "name": "keyword.control.links"
+    },
+    {
+      "match": "\\b(addRoute|servePages|new|serveWebsockets|spawnAt|newAP|here|send)\\b",
+      "name": "support.function.links"
+    },
+    {
+      "match": "\\b(module|open|import)\\b",
+      "name": "keyword.other.module.links"
+    },
+    {
+      "match": "\\b(if|else|true|false)\\b",
+      "name": "keyword.control.conditional.links"
+    }
+  ]
+}
